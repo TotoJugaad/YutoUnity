@@ -1,0 +1,60 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameManager : MonoBehaviour
+{
+
+    public ChangeFlags changeFlags;
+    public KotaeTexy kotaeText;
+    public Click click;
+    public ImageList SpriteList;
+    [Space(10)]
+    public int listLength;
+    [Header("表示するフラッグ")]
+    public int flagNumber;
+    public string listName = "Asia";
+    [System.NonSerialized]public string[] listNamae = new string[]
+    {
+        "Asia",
+        "Europe",
+        "America",
+        "Africa",
+        "ITL",
+        "USSR"
+    };
+    void Update()
+    {
+        if (bool.Parse(PlayerPrefs.GetString("IFClick")) && !click.furagu)
+        {
+            kotaeText.namaeNull();
+            switch (PlayerPrefs.GetInt("Chiiki"))
+            {
+                case 0:
+                    flagNumber = Random.Range(0, 1);
+                    break;
+                case 1:
+                    flagNumber = Random.Range(0, 0);
+                    break;
+                case 2:
+                    flagNumber = Random.Range(0, 0);
+                    break;
+                case 3:
+                    flagNumber = Random.Range(0, 0);
+                    break;
+                case 4:
+                    flagNumber = Random.Range(0, 5);
+                    break;
+                case 5:
+                    flagNumber = Random.Range(0, 13);
+                    break;
+            }
+            changeFlags.changeFlagNumber(flagNumber, listNamae[PlayerPrefs.GetInt("Chiiki")]);
+            kotaeText.kokkiKazu = flagNumber;
+            kotaeText.listName = listNamae[PlayerPrefs.GetInt("Chiiki")];
+            StartCoroutine(kotaeText.WaitForSpacePressCoroutine());
+            click.furagu = true;
+        }
+
+    }
+}

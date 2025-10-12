@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{60CD5616-7AB0-FCDA-A4DC-51961B9A6527}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RTLTMPro/Tests/FastStringBuilderTests.cs">
+    <Files>
+      <File FileName="Assets/Script/MondaiText.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Assets/Script/ChangeFlags.cs" Line="28" Column="100" />
+      <File FileName="Assets/Script/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/ImageList.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/KotaeTexy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Click.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/ChangeTitle.cs" Line="11" Column="27" />
+      <File FileName="Assets/Off/ChangeImage.cs" Line="1" Column="1" />
+      <File FileName="Assets/RTLTMPro/Tests/FastStringBuilderTests.cs" Line="8" Column="44" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="36283335-62ad-43dd-985d-ae4c4695e76c" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

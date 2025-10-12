@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{64C6D72B-22C5-F367-5640-CDA89B42657A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/spawnManger.cs">
+    <Files>
+      <File FileName="Assets/ChangeSize.cs" Line="12" Column="46" />
+      <File FileName="Assets/spawnManger.cs" Line="27" Column="48" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d777a775-a631-41b8-b650-83b87f3f75ca" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

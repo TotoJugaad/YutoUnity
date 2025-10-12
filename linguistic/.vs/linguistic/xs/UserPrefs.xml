@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{60CD5616-7AB0-FCDA-A4DC-51961B9A6527}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/KotaeTexy.cs">
+    <Files>
+      <File FileName="Assets/Script/GameManager.cs" Line="35" Column="24" />
+      <File FileName="Assets/Script/ChangeTitle.cs" Line="30" Column="6" />
+      <File FileName="Assets/Script/ChangeFlags.cs" Line="54" Column="31" />
+      <File FileName="Assets/Script/Click.cs" Line="7" Column="2" />
+      <File FileName="Assets/Script/KotaeTexy.cs" Line="22" Column="14" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b752f677-6bda-4693-9e35-9ffe43ff5c07" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

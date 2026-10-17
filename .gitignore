@@ -1,0 +1,17 @@
+# Unity generated files
+
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+
+# Build outputs
+
+**/[Bb]uild/
+**/[Bb]uilds/
+
+# macOS
+
+.DS_Store
+**/.DS_Store

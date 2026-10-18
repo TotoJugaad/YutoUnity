@@ -33,6 +33,12 @@ public class BoardManager : MonoBehaviour
             // 移動判定と実行
             if (selectedKoma.CanMove(x, y))
             {
+                koma_hontai target = board[x - 1, y - 1];
+                selectedKoma.Move(x, y);
+                if (target != null && target.isBlack != selectedKoma.isBlack)
+                {
+                    selectedKoma.Capture(target);
+                }
                 selectedKoma.Move(x, y);
                 Debug.Log("移動成功: " + x + "," + y);
             }

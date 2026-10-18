@@ -161,6 +161,8 @@ public class koma_hontai : MonoBehaviour
         );
         int dx = newX - x;
         int dy = newY - y;
+        int direction = isBlack ? 1 : -1;
+        dy *= direction;
         
         if (newX < 1 || newX > 9 || newY < 1 || newY > 9)
         {
@@ -202,8 +204,9 @@ public class koma_hontai : MonoBehaviour
                 return CanSlide(bishopDirections, newX, newY);
 
             case PieceType.Lance:
-                return CanSlide(isBlack ? blackLanceDirections : whiteLanceDirections,
-                newX, newY);
+                return CanSlide(
+                    isBlack ? blackLanceDirections : whiteLanceDirections,
+                    newX, newY);
             default:
                 return false;
         }
@@ -218,7 +221,7 @@ public class koma_hontai : MonoBehaviour
         Debug.Log(pieceType + "を選択");
     }
 
-    void Capture(koma_hontai target)
+    public void Capture(koma_hontai target)
     {
         // 盤から消す
         BoardManager.board[target.x - 1, target.y - 1] = null;

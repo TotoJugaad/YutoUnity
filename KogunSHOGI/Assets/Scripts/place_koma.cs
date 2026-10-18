@@ -36,8 +36,8 @@ public class place_koma : MonoBehaviour
         Spawn(8,9, PieceType.Knight, false,(int)KomaData.PieceImage.WhiteKnight);
         Spawn(9,9, PieceType.Lance, false,(int)KomaData.PieceImage.WhiteLance);
         //rank:8
-        Spawn(2,8, PieceType.Bishop, false,(int)KomaData.PieceImage.WhiteBishop);
-        Spawn(8,8, PieceType.Rook, false,(int)KomaData.PieceImage.WhiteRook);
+        Spawn(8,8, PieceType.Bishop, false,(int)KomaData.PieceImage.WhiteBishop);
+        Spawn(2,8, PieceType.Rook, false,(int)KomaData.PieceImage.WhiteRook);
     }
 
     void Spawn(int x, int y, PieceType pieceType, bool isBlack, int spriteIndex)

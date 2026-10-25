@@ -34,8 +34,8 @@ public class BoardManager : MonoBehaviour
             if (selectedKoma.CanMove(x, y))
             {
                 koma_hontai target = board[x - 1, y - 1];
-                selectedKoma.Move(x, y);
-                if (target != null && target.isBlack != selectedKoma.isBlack)
+
+                if (target != null)
                 {
                     selectedKoma.Capture(target);
                     Debug.Log("駒を取りました: " + target.pieceType);

@@ -23,8 +23,6 @@ public class HandManager : MonoBehaviour
             blackHand.Add(koma);
         else
             whiteHand.Add(koma);
-        if (instance != null)
-        instance.RefreshHands();
     }
 
     public static void Release(koma_hontai koma, int x, int y)
@@ -43,7 +41,5 @@ public class HandManager : MonoBehaviour
 
         // 位置を更新
         koma.transform.position = new Vector3(x - 5, y - 5, 0);
-        if (instance != null)
-            instance.RefreshHands();
     }
 }

@@ -35,12 +35,13 @@ public class HandKoma : MonoBehaviour
         {
             sr.sprite = KomaData.Images[index];
         }
-        void OnMouseDown()
-        {
-            BoardManager.selectedHandPiece = pieceType;
-            BoardManager.selectedHandBlack = isBlack;
+        
+    }
+    void OnMouseDown()
+    {
+        BoardManager.selectedHandPiece = pieceType;
+        BoardManager.selectedHandBlack = isBlack;
 
-            Debug.Log(pieceType + "を選択");
-        }
+        Debug.Log(pieceType + "を選択");
     }
 }

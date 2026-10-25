@@ -3,14 +3,17 @@ using System.Collections.Generic;
 
 public class HandManager : MonoBehaviour
 {
+    public static HandManager instance;
+
     public static List<koma_hontai> blackHand = new List<koma_hontai>();
     public static List<koma_hontai> whiteHand = new List<koma_hontai>();
-
+    
     // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        instance = this;
     }
+    
     public static void Add(koma_hontai koma, bool black)
     {
         koma.isBlack = black;
@@ -20,6 +23,8 @@ public class HandManager : MonoBehaviour
             blackHand.Add(koma);
         else
             whiteHand.Add(koma);
+        if (instance != null)
+        instance.RefreshHands();
     }
 
     public static void Release(koma_hontai koma, int x, int y)
@@ -38,5 +43,7 @@ public class HandManager : MonoBehaviour
 
         // 位置を更新
         koma.transform.position = new Vector3(x - 5, y - 5, 0);
+        if (instance != null)
+            instance.RefreshHands();
     }
 }

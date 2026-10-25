@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec84796b79f42402387f0bac09de5f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
-  pieceType: 0
+  pieceType: 4
   isBlack: 0
 --- !u!61 &102423489
 BoxCollider2D:
@@ -333,7 +333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &204685188
 Transform:
   m_ObjectHideFlags: 0
@@ -348,8 +348,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1960433550}
-  - {fileID: 1537798059}
   - {fileID: 414464236}
+  - {fileID: 1537798059}
   - {fileID: 640248694}
   - {fileID: 871597488}
   - {fileID: 1283587021}
@@ -569,7 +569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &432433313
 Transform:
   m_ObjectHideFlags: 0
@@ -835,7 +835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec84796b79f42402387f0bac09de5f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
-  pieceType: 0
+  pieceType: 6
   isBlack: 0
 --- !u!61 &546076695
 BoxCollider2D:
@@ -1112,8 +1112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec84796b79f42402387f0bac09de5f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
-  pieceType: 0
-  isBlack: 0
+  pieceType: 3
+  isBlack: 1
 --- !u!61 &640248697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1420,7 +1420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec84796b79f42402387f0bac09de5f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
-  pieceType: 0
+  pieceType: 3
   isBlack: 0
 --- !u!61 &749940922
 BoxCollider2D:
@@ -1574,8 +1574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec84796b79f42402387f0bac09de5f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
-  pieceType: 0
-  isBlack: 0
+  pieceType: 6
+  isBlack: 1
 --- !u!61 &776080435
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1728,8 +1728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec84796b79f42402387f0bac09de5f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
-  pieceType: 0
-  isBlack: 0
+  pieceType: 4
+  isBlack: 1
 --- !u!61 &871597491
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1974,7 +1974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec84796b79f42402387f0bac09de5f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
-  pieceType: 0
+  pieceType: 5
   isBlack: 0
 --- !u!61 &1019549211
 BoxCollider2D:
@@ -2203,8 +2203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec84796b79f42402387f0bac09de5f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
-  pieceType: 0
-  isBlack: 0
+  pieceType: 5
+  isBlack: 1
 --- !u!61 &1283587024
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2357,8 +2357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec84796b79f42402387f0bac09de5f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
-  pieceType: 0
-  isBlack: 0
+  pieceType: 1
+  isBlack: 1
 --- !u!61 &1537798062
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2616,7 +2616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec84796b79f42402387f0bac09de5f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
-  pieceType: 0
+  pieceType: 2
   isBlack: 0
 --- !u!61 &1874631127
 BoxCollider2D:
@@ -2771,7 +2771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 0
-  isBlack: 0
+  isBlack: 1
 --- !u!61 &1960433553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3016,7 +3016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec84796b79f42402387f0bac09de5f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
-  pieceType: 0
+  pieceType: 1
   isBlack: 0
 --- !u!61 &2069712801
 BoxCollider2D:

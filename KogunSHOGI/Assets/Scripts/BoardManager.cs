@@ -38,6 +38,7 @@ public class BoardManager : MonoBehaviour
                 if (target != null && target.isBlack != selectedKoma.isBlack)
                 {
                     selectedKoma.Capture(target);
+                    Debug.Log("駒を取りました: " + target.pieceType);
                 }
                 selectedKoma.Move(x, y);
                 Debug.Log("移動成功: " + x + "," + y);

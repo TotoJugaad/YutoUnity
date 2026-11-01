@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 4
   isBlack: 0
+  countText: {fileID: 0}
 --- !u!61 &102423489
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -284,7 +285,7 @@ GameObject:
   - component: {fileID: 159697195}
   - component: {fileID: 159697194}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: PrepreForPlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -464,6 +465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 0
   isBlack: 0
+  countText: {fileID: 0}
 --- !u!61 &414464239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -837,6 +839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 6
   isBlack: 0
+  countText: {fileID: 0}
 --- !u!61 &546076695
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -905,6 +908,8 @@ MonoBehaviour:
   isBlack: 0
   isPromoted: 0
   pieceType: 0
+  blackHandIcon: {fileID: 0}
+  whiteHandIcon: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,6 +1119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 3
   isBlack: 1
+  countText: {fileID: 0}
 --- !u!61 &640248697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1268,6 +1274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 0
   isBlack: 0
+  countText: {fileID: 0}
 --- !u!61 &726312060
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1422,6 +1429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 3
   isBlack: 0
+  countText: {fileID: 0}
 --- !u!61 &749940922
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1576,6 +1584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 6
   isBlack: 1
+  countText: {fileID: 0}
 --- !u!61 &776080435
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1730,6 +1739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 4
   isBlack: 1
+  countText: {fileID: 0}
 --- !u!61 &871597491
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1976,6 +1986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 5
   isBlack: 0
+  countText: {fileID: 0}
 --- !u!61 &1019549211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2205,6 +2216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 5
   isBlack: 1
+  countText: {fileID: 0}
 --- !u!61 &1283587024
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2359,6 +2371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 1
   isBlack: 1
+  countText: {fileID: 0}
 --- !u!61 &1537798062
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2618,6 +2631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 2
   isBlack: 0
+  countText: {fileID: 0}
 --- !u!61 &1874631127
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2772,6 +2786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 0
   isBlack: 1
+  countText: {fileID: 0}
 --- !u!61 &1960433553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3018,6 +3033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandKoma
   pieceType: 1
   isBlack: 0
+  countText: {fileID: 0}
 --- !u!61 &2069712801
 BoxCollider2D:
   m_ObjectHideFlags: 0

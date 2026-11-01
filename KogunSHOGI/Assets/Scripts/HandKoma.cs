@@ -51,4 +51,13 @@ public class HandKoma : MonoBehaviour
 
         Debug.Log($"{pieceType}を選択（先手：{isBlack}）");
     }
+    public void SetHandIconActive(PieceType type, bool black, bool active)
+    {
+        HandKoma icon = GetIcon(type, black);
+
+        if (icon != null)
+        {
+            icon.gameObject.SetActive(active);
+        }
+    }
 }

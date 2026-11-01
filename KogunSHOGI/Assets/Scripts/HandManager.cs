@@ -6,6 +6,8 @@ public class HandManager : MonoBehaviour
 
     public static List<koma_hontai> blackHand = new List<koma_hontai>();
     public static List<koma_hontai> whiteHand = new List<koma_hontai>();
+
+    [SerializeField] private HandKoma[] AllHandIcons;
     
     public static void Add(koma_hontai koma, bool black)
     {
@@ -38,7 +40,7 @@ public class HandManager : MonoBehaviour
         {
             icon.gameObject.SetActive(hasAnother);
         }
-        
+
         koma.x = x;
         koma.y = y;
 

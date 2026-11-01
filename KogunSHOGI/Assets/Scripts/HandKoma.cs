@@ -17,12 +17,12 @@ public class HandKoma : MonoBehaviour
     public TMP_Text countText;
     private SpriteRenderer sr;
 
-    void Awake()
+    /*void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         UpdateSprite();
-    }
-    public void UpdateSprite()
+    }*/
+    /*public void UpdateSprite()
     {
         if (sr == null)
         {
@@ -43,7 +43,7 @@ public class HandKoma : MonoBehaviour
             sr.sprite = KomaData.Images[index];
         }
         
-    }
+    }*/
     void OnMouseDown()
     {
         BoardManager.selectedHandPiece = pieceType;
@@ -51,7 +51,7 @@ public class HandKoma : MonoBehaviour
 
         Debug.Log($"{pieceType}を選択（先手：{isBlack}）");
     }
-    public void SetHandIconActive(PieceType type, bool black, bool active)
+    /*public void SetHandIconActive(PieceType type, bool black, bool active)
     {
         HandKoma icon = GetIcon(type, black);
 
@@ -59,5 +59,5 @@ public class HandKoma : MonoBehaviour
         {
             icon.gameObject.SetActive(active);
         }
-    }
+    }*/
 }

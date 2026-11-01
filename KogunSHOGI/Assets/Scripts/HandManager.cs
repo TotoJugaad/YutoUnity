@@ -8,7 +8,38 @@ public class HandManager : MonoBehaviour
     public static List<koma_hontai> whiteHand = new List<koma_hontai>();
 
     [SerializeField] private HandKoma[] AllHandIcons;
-    
+
+    public HandKoma GetHandIcon(PieceType type, bool black)
+    {
+        foreach (HandKoma icon in AllHandIcons)
+        {
+            if (icon == null) continue;
+
+            if (icon.PieceType == type && icon.IsBlack == black)
+            {
+            return icon;
+            }
+        }
+
+        return null;
+    }
+
+    public void SetHandIconActive(PieceType type, bool black, bool active)
+    {
+        HandKoma icon = GetHandIcon(type, black);
+
+        if (icon != null)
+        {
+            icon.gameObject.SetActive(active);
+        }
+        else
+        {
+            Debug.LogWarning(
+                $"{type}（先手:{black}）の持ち駒アイコンが見つかりません"
+            );
+        }
+    }
+
     public static void Add(koma_hontai koma, bool black)
     {
         koma.isBlack = black;
@@ -51,4 +82,5 @@ public class HandManager : MonoBehaviour
         // 位置を更新
         koma.transform.position = new Vector3(x - 5, y - 5, 0);
     }
+    
 }

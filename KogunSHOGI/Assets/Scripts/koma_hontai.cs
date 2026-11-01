@@ -85,6 +85,10 @@ public class koma_hontai : MonoBehaviour
     public bool isPromoted;
 
     public PieceType pieceType;
+
+    [Header("持ち駒アイコン")]
+    public HandKoma blackHandIcon;
+    public HandKoma whiteHandIcon;
     
     private SpriteRenderer sr;
 
@@ -235,6 +239,21 @@ public class koma_hontai : MonoBehaviour
         // 持ち駒へ
         HandManager.Add(target, isBlack);
         // 画面から消す
+        HandKoma icon = isBlack
+        ? target.blackHandIcon
+        : target.whiteHandIcon;
+
+        if (icon != null)
+        {
+            icon.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning(
+                target.pieceType + "の持ち駒アイコンが未設定です"
+            );
+        }
+        
         target.gameObject.SetActive(false);
     }
 }

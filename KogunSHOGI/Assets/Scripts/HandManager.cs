@@ -9,8 +9,13 @@ public class HandManager : MonoBehaviour
 
     [SerializeField] private HandKoma[] AllHandIcons = new HandKoma[14];
     
-
+    public static HandManager instance;
     
+    void Awake()
+    {
+        instance = this;
+    }
+
     public HandKoma GetHandIcon(PieceType type, bool black)
     {
         foreach (HandKoma icon in AllHandIcons)

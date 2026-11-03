@@ -7,6 +7,7 @@ public class BoardManager : MonoBehaviour
     public static koma_hontai[,] board = new koma_hontai[9, 9];
     public static koma_hontai selectedKoma;
     public static bool isWaitingForMoveClick;
+    public HandManager handManager;
 
     void Update()
     {
@@ -39,6 +40,7 @@ public class BoardManager : MonoBehaviour
                 {
                     selectedKoma.Capture(target);
                     Debug.Log("駒を取りました: " + target.pieceType);
+                    
                 }
                 selectedKoma.Move(x, y);
                 Debug.Log("移動成功: " + x + "," + y);

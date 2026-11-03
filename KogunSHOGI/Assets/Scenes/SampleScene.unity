@@ -615,6 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7b59abc4547430db9c08d822afbc44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
+  handManager: {fileID: 184194883}
 --- !u!1 &432433312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2582,6 +2583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7b59abc4547430db9c08d822afbc44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
+  handManager: {fileID: 0}
 --- !u!1 &1874631123
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,18 +10,25 @@ public class HandManager : MonoBehaviour
     public static List<koma_hontai> blackHand = new List<koma_hontai>();
     public static List<koma_hontai> whiteHand = new List<koma_hontai>();
 
-    [SerializeField] private HandKoma[] AllHandIcons = new HandKoma[14];
+    [SerializeField] private GameObject[] AllHandIcons = new GameObject[14];
     
     
     void Awake()
     {
         instance = this;
+        foreach (GameObject icon in AllHandIcons)
+        {
+            if (icon != null)
+            {
+                icon.SetActive(false);
+            }
+        }
     }
     private static int GetSideIndex(bool isBlack)
     {
         return isBlack ? 1 : 0;
     }
-    
+
     public void SetHandIconActive(PieceType pieceType, bool isBlack, bool active)
     {
         int index = (isBlack ? 7 : 0) + (int)pieceType;
@@ -36,10 +43,11 @@ public class HandManager : MonoBehaviour
             Debug.LogWarning("持ち駒アイコンが設定されていません: " + index);
             return;
         }
-        AllHandIcons[index].gameObject.SetActive(active);
+        AllHandIcons[index].SetActive(active);
     }
     public static void Add(koma_hontai koma, bool isBlack)
     {
+        Debug.Log("Year Add Daze");
         if (koma == null)
             return;
         koma.isBlack = isBlack;
@@ -110,10 +118,8 @@ public class HandManager : MonoBehaviour
         koma.x = x;
         koma.y = y;
         BoardManager.board[x - 1, y - 1] = koma;
-        HandKoma icon = koma.isBlack
-            ? koma.blackHandIcon
-            : koma.whiteHandIcon;
-        
+        GameObject icon = instance.GetHandIcon(koma.pieceType, koma.isBlack);
+
         BoardManager.board[x - 1, y - 1] = koma;
         // 表示する
         koma.gameObject.SetActive(true);
@@ -121,19 +127,10 @@ public class HandManager : MonoBehaviour
         // 位置を更新
         koma.transform.position = new Vector3(x - 5, y - 5, 0);
     }
-    public HandKoma GetHandIcon(PieceType type, bool black)
+    public GameObject GetHandIcon(PieceType type, bool black)
     {
-        foreach (HandKoma icon in AllHandIcons)
-        {
-            if (icon == null) continue;
-
-            if (icon.PieceType == type && icon.IsBlack == black)
-            {
-            return icon;
-            }
-        }
-
-        return null;
+        int index = (black ? 7 : 0) + (int)type;
+        return AllHandIcons[index];
     }
     
 }

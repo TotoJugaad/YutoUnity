@@ -8,10 +8,10 @@ public class HandManager : MonoBehaviour
     public static List<koma_hontai> whiteHand = new List<koma_hontai>();
 
     [SerializeField] private HandKoma[] AllHandIcons = new HandKoma[14];
-    [SerializeField] private GameObject[] AllHandIconsObj = new GameObject[14];
+    
 
     
-    public GameObject GetHandIcon(PieceType type, bool black)
+    public HandKoma GetHandIcon(PieceType type, bool black)
     {
         foreach (HandKoma icon in AllHandIcons)
         {
@@ -19,7 +19,7 @@ public class HandManager : MonoBehaviour
 
             if (icon.PieceType == type && icon.IsBlack == black)
             {
-            return icon.gameObject;
+            return icon;
             }
         }
 
@@ -28,11 +28,11 @@ public class HandManager : MonoBehaviour
 
     public void SetHandIconActive(PieceType type, bool black, bool active)
     {
-        GameObject icon = GetHandIcon(type, black);
+        HandKoma icon = GetHandIcon(type, black);
 
         if (icon != null)
         {
-            icon.SetActive(active);
+            icon.gameObject.SetActive(active);
         }
         else
         {

@@ -118,9 +118,6 @@ public class HandManager : MonoBehaviour
         koma.x = x;
         koma.y = y;
         BoardManager.board[x - 1, y - 1] = koma;
-        GameObject icon = instance.GetHandIcon(koma.pieceType, koma.isBlack);
-
-        BoardManager.board[x - 1, y - 1] = koma;
         // 表示する
         koma.gameObject.SetActive(true);
 

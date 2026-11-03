@@ -349,20 +349,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandManager
   AllHandIcons:
-  - {fileID: 726312059}
-  - {fileID: 2069712800}
-  - {fileID: 1874631126}
-  - {fileID: 749940921}
-  - {fileID: 102423488}
-  - {fileID: 1019549210}
-  - {fileID: 546076694}
-  - {fileID: 1960433552}
-  - {fileID: 1537798061}
-  - {fileID: 414464238}
-  - {fileID: 640248696}
-  - {fileID: 871597490}
-  - {fileID: 1283587023}
-  - {fileID: 776080434}
+  - {fileID: 726312056}
+  - {fileID: 2069712797}
+  - {fileID: 1874631123}
+  - {fileID: 749940918}
+  - {fileID: 102423485}
+  - {fileID: 1019549207}
+  - {fileID: 546076691}
+  - {fileID: 1960433549}
+  - {fileID: 1537798058}
+  - {fileID: 414464235}
+  - {fileID: 640248693}
+  - {fileID: 871597487}
+  - {fileID: 1283587020}
+  - {fileID: 776080431}
 --- !u!4 &184194884
 Transform:
   m_ObjectHideFlags: 0
@@ -968,8 +968,6 @@ MonoBehaviour:
   isBlack: 0
   isPromoted: 0
   pieceType: 0
-  blackHandIcon: {fileID: 0}
-  whiteHandIcon: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

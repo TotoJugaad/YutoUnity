@@ -17,7 +17,7 @@ public class BoardManager : MonoBehaviour
         }  
 
         if (Input.GetMouseButtonDown(0))
-        {  
+        {
             isWaitingForMoveClick = false; 
             // マウス座標を計算
             Vector3 mousePos = Input.mousePosition;
@@ -40,7 +40,6 @@ public class BoardManager : MonoBehaviour
                 {
                     selectedKoma.Capture(target);
                     Debug.Log("駒を取りました: " + target.pieceType);
-                    
                 }
                 selectedKoma.Move(x, y);
                 Debug.Log("移動成功: " + x + "," + y);

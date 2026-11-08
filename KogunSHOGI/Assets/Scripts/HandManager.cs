@@ -129,5 +129,12 @@ public class HandManager : MonoBehaviour
         int index = (black ? 7 : 0) + (int)type;
         return AllHandIcons[index];
     }
-    
+    public static koma_hontai GetHandPiece(PieceType type, bool isBlack)
+    {
+        List<koma_hontai> hand = isBlack ? blackHand : whiteHand;
+
+        return hand.Find(koma =>
+            koma != null && koma.pieceType == type
+        );
+    }
 }

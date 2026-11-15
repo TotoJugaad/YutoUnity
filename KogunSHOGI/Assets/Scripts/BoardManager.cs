@@ -113,9 +113,5 @@ public class BoardManager : MonoBehaviour
             selectedHandPiece = PieceType.Unselected;
             Debug.Log($"持ち駒を配置: {koma.pieceType} ({x},{y})");
         }
-
-        selectedHandPiece = PieceType.Unselected;
-
-        Debug.Log($"持ち駒を配置: {koma.pieceType} ({x},{y})");
     }
 }

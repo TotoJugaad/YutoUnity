@@ -15,11 +15,4 @@ public class HandKoma : MonoBehaviour
 
     [Header("枚数表示")]
     public TMP_Text countText;
-    void OnMouseDown()
-    {
-        BoardManager.selectedHandPiece = pieceType;
-        BoardManager.selectedHandBlack = isBlack;
-
-        Debug.Log($"{pieceType}を選択（先手：{isBlack}）");
-    }
 }

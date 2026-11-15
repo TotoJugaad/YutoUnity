@@ -115,11 +115,18 @@ public class HandManager : MonoBehaviour
         }
         Mochigoma[side, type]--;
 
-        instance.SetHandIconActive(
-            koma.pieceType,
-            koma.isBlack,
-            Mochigoma[side, type] > 0
-        );
+        if (instance != null)
+        {
+            instance.SetHandIconActive(
+                koma.pieceType,
+                koma.isBlack,
+                Mochigoma[side, type] > 0
+            );
+        }
+        else
+        {
+        Debug.LogError("HandManager.instance がありません");
+        }
         // 盤上に戻す
         koma.x = x;
         koma.y = y;
@@ -129,7 +136,7 @@ public class HandManager : MonoBehaviour
 
         // 位置を更新
         koma.transform.position = new Vector3(x - 5, y - 5, 0);
-        
+
         return true;
     }
     public GameObject GetHandIcon(PieceType type, bool black)

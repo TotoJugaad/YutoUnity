@@ -17,10 +17,6 @@ public class BoardManager : MonoBehaviour
     }
     void Update()
     {
-        if (selectedKoma == null)
-        {
-            return;
-        }  
         if (Mouse.current == null) return;
 
         if (!Mouse.current.leftButton.wasPressedThisFrame)
@@ -112,7 +108,11 @@ public class BoardManager : MonoBehaviour
             return;
         }
 
-        HandManager.Release(koma, x, y);
+        if (HandManager.Release(koma, x, y))
+        {
+            selectedHandPiece = PieceType.Unselected;
+            Debug.Log($"持ち駒を配置: {koma.pieceType} ({x},{y})");
+        }
 
         selectedHandPiece = PieceType.Unselected;
 

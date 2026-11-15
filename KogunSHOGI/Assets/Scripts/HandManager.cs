@@ -69,11 +69,6 @@ public class HandManager : MonoBehaviour
             whiteHand.Add(koma);
 
         // 枚数に応じてアイコンを表示
-        instance.SetHandIconActive(
-            koma.pieceType,
-            isBlack,
-            Mochigoma[side, type] > 0
-        );
         if (instance != null)
         {
             instance.SetHandIconActive(
@@ -88,10 +83,10 @@ public class HandManager : MonoBehaviour
         }
     }
 
-    public static void Release(koma_hontai koma, int x, int y)
+    public static bool Release(koma_hontai koma, int x, int y)
     {
         if (koma == null)
-            return;
+            return false;
 
         int side = GetSideIndex(koma.isBlack);
         int type = (int)koma.pieceType;
@@ -99,14 +94,14 @@ public class HandManager : MonoBehaviour
         if (type < 0 || type >= 7)
         {
             Debug.LogWarning("持ち駒にできない駒です: " + koma.pieceType);
-            return;
+            return false;
         }
 
         // 枚数が0なら打てない
         if (Mochigoma[side, type] <= 0)
         {
             Debug.LogWarning("持ち駒がありません: " + koma.pieceType);
-            return;
+            return false;
         }
 
         List<koma_hontai> hand = koma.isBlack
@@ -116,7 +111,7 @@ public class HandManager : MonoBehaviour
         if (!hand.Remove(koma))
         {
             Debug.LogWarning("持ち駒リストに駒が見つかりません");
-            return;
+            return false;
         }
         Mochigoma[side, type]--;
 
@@ -134,6 +129,8 @@ public class HandManager : MonoBehaviour
 
         // 位置を更新
         koma.transform.position = new Vector3(x - 5, y - 5, 0);
+        
+        return true;
     }
     public GameObject GetHandIcon(PieceType type, bool black)
     {

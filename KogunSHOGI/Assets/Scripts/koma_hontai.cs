@@ -210,15 +210,6 @@ public class koma_hontai : MonoBehaviour
         }
         
     }
-
-    void OnMouseUp()
-    {
-
-        BoardManager.selectedKoma = this;
-        BoardManager.isWaitingForMoveClick = true;
-        Debug.Log(pieceType + "を選択");
-    }
-
     public void Capture(koma_hontai target)
     {
         // 盤から消す

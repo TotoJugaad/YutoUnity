@@ -17,6 +17,11 @@ public class BoardManager : MonoBehaviour
     }
     void Update()
     {
+        if (mainCamera == null)
+        {
+            Debug.LogError("MainCameraが見つかりません");
+            return;
+        }
         if (Mouse.current == null) return;
 
         if (!Mouse.current.leftButton.wasPressedThisFrame)

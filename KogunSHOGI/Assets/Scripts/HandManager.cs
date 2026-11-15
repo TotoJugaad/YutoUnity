@@ -142,6 +142,12 @@ public class HandManager : MonoBehaviour
     public GameObject GetHandIcon(PieceType type, bool black)
     {
         int index = (black ? 7 : 0) + (int)type;
+        if (index < 0 || index >= AllHandIcons.Length)
+        {
+            Debug.LogWarning("アイコン番号が範囲外です");
+            return null;
+        }
+
         return AllHandIcons[index];
     }
     public static koma_hontai GetHandPiece(PieceType type, bool isBlack)
@@ -149,7 +155,9 @@ public class HandManager : MonoBehaviour
         List<koma_hontai> hand = isBlack ? blackHand : whiteHand;
 
         return hand.Find(koma =>
-            koma != null && koma.pieceType == type
+            koma != null &&
+            koma.pieceType == type &&
+            koma.isBlack == isBlack
         );
     }
     public bool TrySelectHandIcon(GameObject clickedObject)

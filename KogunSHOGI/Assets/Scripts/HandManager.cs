@@ -47,7 +47,6 @@ public class HandManager : MonoBehaviour
     }
     public static void Add(koma_hontai koma, bool isBlack)
     {
-        Debug.Log("Year Add Daze");
         if (koma == null)
             return;
         koma.isBlack = isBlack;
@@ -75,6 +74,18 @@ public class HandManager : MonoBehaviour
             isBlack,
             Mochigoma[side, type] > 0
         );
+        if (instance != null)
+        {
+            instance.SetHandIconActive(
+                koma.pieceType,
+                isBlack,
+                Mochigoma[side, type] > 0
+            );
+        }
+        else
+        {
+        Debug.LogError("HandManager.instance がありません");
+        }
     }
 
     public static void Release(koma_hontai koma, int x, int y)
@@ -136,5 +147,39 @@ public class HandManager : MonoBehaviour
         return hand.Find(koma =>
             koma != null && koma.pieceType == type
         );
+    }
+    public bool TrySelectHandIcon(GameObject clickedObject)
+    {
+        for (int i = 0; i < AllHandIcons.Length; i++)
+        {
+            GameObject icon = AllHandIcons[i];
+
+            if (icon == null) continue;
+
+            if (clickedObject == icon ||
+                clickedObject.transform.IsChildOf(icon.transform))
+            {
+                int typeIndex = i % 7;
+                bool isBlack = i >= 7;
+
+                PieceType type = (PieceType)typeIndex;
+
+                if (GetHandPiece(type, isBlack) == null)
+                {
+                    Debug.LogWarning("持ち駒がありません: " + type);
+                    return true;
+                }
+
+                BoardManager.selectedHandPiece = type;
+                BoardManager.selectedHandBlack = isBlack;
+
+                BoardManager.selectedKoma = null;
+
+                Debug.Log($"{type}を選択（先手：{isBlack}）");
+
+                return true;
+            }
+        }
+        return false;
     }
 }
